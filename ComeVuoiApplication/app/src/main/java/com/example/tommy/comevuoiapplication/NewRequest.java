@@ -40,9 +40,9 @@ public class NewRequest extends AppCompatActivity {
                 public void onResponse(Call<Movie> call, Response<Movie> response) {
                     titles.add(response.body().getTitle());
                     urlImages.add(response.body().getUrlImage());
-                    /*if(requestTitles.length == urlImages.size()){
+                    if(requestTitles.length == urlImages.size()){
                         initRecicleView();
-                    }*/
+                    }
                 }
                 @Override
                 public void onFailure(Call<Movie> call, Throwable t) {
@@ -60,11 +60,11 @@ public class NewRequest extends AppCompatActivity {
         return urlImages;
     }
 
-   /* public void initRecicleView(){
+    public void initRecicleView(){
         RecyclerView recyclerView = findViewById(R.id.recicleView);
         ViewAdapter viewAdapter = new ViewAdapter(titles, urlImages, this);
         recyclerView.setAdapter(viewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }*/
+    }
 
 }

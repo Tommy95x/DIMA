@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
     private void initBipMapImage(){
         names = request.getTitles();
         imagesURL = request.getImages();
-        initRecicleView();
+        //initRecicleView();
     }
 
-    public void initRecicleView(){
+    /*public void initRecicleView(){
         RecyclerView recyclerView = findViewById(R.id.recicleView);
         ViewAdapter viewAdapter = new ViewAdapter(names, imagesURL, this);
         recyclerView.setAdapter(viewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }
+    }*/
 }
